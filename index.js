@@ -1,1 +1,22 @@
 // Code your solution here
+
+function findMatching(source, sought) {
+  return source.filter( possibleMatch =>
+    possibleMatch.toLowerCase() === sought.toLowerCase()
+  )
+}
+
+function fuzzyMatch(source, testString) {
+  return source.filter( possibleMatch =>
+    possibleMatch.toLowerCase().indexOf(testString.toLowerCase()) === 0
+  )
+}
+
+function matchName(source, soughtName) {
+  return source.filter( record => record.name === soughtName)
+}
+
+/* superbowlWin = (record) => {
+    let result = record.find( record => record.result === "W" )
+    return !!result ? result.year : undefined
+  } */
